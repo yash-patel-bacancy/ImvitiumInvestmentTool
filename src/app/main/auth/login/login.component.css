@@ -1,0 +1,39 @@
+.btn{
+    background-color: rgb(8, 60, 138); 
+    color: white; 
+    margin-left: 210px; 
+    border-radius: 16px; 
+}
+.style{
+    margin-left:180px;
+}
+.input[type="text"]{
+    background-color: rgb(74, 174, 192);
+    color:white;
+    border-radius: 16px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    height:20px;
+    margin-bottom: 10px;
+}
+label{
+    margin-top: 10px;
+}
+input{
+    border-radius: 20px;
+    background-color: rgb(22, 177, 177);
+}
+#center{
+    margin-left: 70px;
+}
+/* .alert{
+    font-size: 10px;
+    color:red;
+    margin-bottom: 0px;
+} */
+/* small{
+    margin-left: 70px;
+    margin-bottom: -10px;
+} */

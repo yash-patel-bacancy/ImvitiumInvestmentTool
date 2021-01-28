@@ -1,0 +1,20 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ContactComponent } from './contact.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
+@NgModule({
+  declarations: [ContactComponent],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule.forChild([
+      { path: '', component: ContactComponent }, 
+    ])
+  ],
+  exports: [ContactComponent]
+})
+export class ContactModule { }

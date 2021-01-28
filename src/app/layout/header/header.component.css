@@ -1,0 +1,21 @@
+ul{
+    margin-top: 40px;
+}
+#text{
+    background-color: #394e78;
+    border-radius: 20px;
+    margin:5px;
+    padding: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    list-style-type:none;
+}
+a{
+    color:white;
+}/* 
+.row {
+    background-image: url("../../assets/images/star-img.png");
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+} */

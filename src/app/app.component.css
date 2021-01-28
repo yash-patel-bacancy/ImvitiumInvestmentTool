@@ -1,0 +1,12 @@
+.bg{
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    background-image: linear-gradient(rgb(16, 7, 49),rgb(67, 4, 80) );
+    color:white;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+

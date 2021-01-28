@@ -1,0 +1,44 @@
+.btn{
+    background-color: rgb(68, 122, 184); 
+    color: white; 
+    border-radius: 30px; 
+    font-size: 25px;
+}
+.button{
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+.col-xs-8{
+    font-size: 20px;
+}
+h1{
+    font-size: 45px;
+}
+ul.list li {
+    list-style: none;
+    display: flex;
+    font-weight: 500;
+    margin-left: -35px;
+}
+
+strong{
+    margin-left: 230px;
+}
+.footer{
+    margin-bottom: -100px;
+}
+.img{
+    position: relative;
+    margin-bottom:-310px;
+    margin-left: 320px;
+    margin-top: 80px;
+    animation-name: sun;
+    animation-duration: 4s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes sun{
+    from{left:0px; top:0px;}
+    to{left:20px; top:0px;}
+} 
