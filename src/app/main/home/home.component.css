@@ -18,20 +18,15 @@ h1{
 ul.list li {
     list-style: none;
     display: flex;
-    font-weight: 500;
     margin-left: -35px;
 }
-
 strong{
     margin-left: 230px;
-}
-.footer{
-    margin-bottom: -100px;
 }
 .img{
     position: relative;
     margin-bottom:-310px;
-    margin-left: 320px;
+    margin-left: 290px;
     margin-top: 80px;
     animation-name: sun;
     animation-duration: 4s;
@@ -40,5 +35,5 @@ strong{
 }
 @keyframes sun{
     from{left:0px; top:0px;}
-    to{left:20px; top:0px;}
+    to{left:30px; top:0px;}
 } 

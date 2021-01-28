@@ -1,11 +1,13 @@
 .btn{
     background-color: rgb(8, 60, 138); 
     color: white; 
-    margin-left: 210px; 
-    border-radius: 16px; 
+    margin-left: 130px; 
+    border-radius: 20px; 
+    font-size: 20px;
+
 }
 .style{
-    margin-left:180px;
+    margin-left:110px;
 }
 .input[type="text"]{
     background-color: rgb(74, 174, 192);
@@ -26,14 +28,13 @@ input{
     background-color: rgb(22, 177, 177);
 }
 #center{
-    margin-left: 70px;
+    margin-left: 45px;
 }
-/* .alert{
-    font-size: 10px;
+.alert{
+    font-size: 12px;
     color:red;
     margin-bottom: 0px;
-} */
-/* small{
-    margin-left: 70px;
-    margin-bottom: -10px;
-} */
+}
+small{
+    margin-left: 35px;
+}

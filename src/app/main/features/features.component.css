@@ -36,4 +36,5 @@ ul.box-block{
 ul.box-block img{
     border: 1px solid rgb(106, 223, 238);
     margin: 22px;
+    cursor: zoom-in;
 }
