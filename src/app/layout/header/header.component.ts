@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   public loggedIn = false;
   public isUser:boolean = false;
   public route: any;
-  constructor(private router: Router,
+  constructor(public router: Router,
               private authService: AuthService,
               ) { }
 
