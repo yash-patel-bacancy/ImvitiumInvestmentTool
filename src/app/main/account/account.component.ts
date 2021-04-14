@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { UpdatesModel } from 'src/app/interfaces/updates.model';
-import { UserModel } from 'src/app/interfaces/user.model';
-import { ToasterService } from 'src/app/services/toaster.service';
-import { UserService } from 'src/app/services/user.service';
+import { UpdatesModel } from '../../interfaces/updates.model';
+import { UserModel } from '../../interfaces/user.model';
+import { ToasterService } from '../../services/toaster.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-account',

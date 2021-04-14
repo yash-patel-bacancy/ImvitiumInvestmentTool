@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { UpdatesModel } from 'src/app/interfaces/updates.model';
-import { UserDataModel, UserListModel } from 'src/app/interfaces/userlist.model';
-import { AdminService } from 'src/app/services/admin.service';
-import { ToasterService } from 'src/app/services/toaster.service';
+import { UpdatesModel } from '../../interfaces/updates.model';
+import { UserDataModel, UserListModel } from '../../interfaces/userlist.model';
+import { AdminService } from '../../services/admin.service';
+import { ToasterService } from '../../services/toaster.service';
 
 @Component({
   selector: 'app-admin',

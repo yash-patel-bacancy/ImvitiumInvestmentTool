@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthGuard } from 'src/app/guards/auth.guard';
+import { AuthGuard } from '../../guards/auth.guard';
 
 @NgModule({
   declarations: [AdminComponent],

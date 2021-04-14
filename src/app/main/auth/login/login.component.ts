@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { LoginModel } from 'src/app/interfaces/login.model';
-import { AuthService } from 'src/app/services/auth.service';
-import { ToasterService } from 'src/app/services/toaster.service';
+import { LoginModel } from '../../interfaces/login.model';
+import { AuthService } from '../../services/auth.service';
+import { ToasterService } from '../../services/toaster.service';
 
 @Component({
   selector: 'app-login',

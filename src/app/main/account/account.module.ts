@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AccountComponent } from './account.component';
 import { FormsModule } from '@angular/forms';
-import { SharedModule } from 'src/app/core/modules/shared.module';
-import { AuthGuard } from 'src/app/guards/auth.guard';
+import { SharedModule } from '../../core/modules/shared.module';
+import { AuthGuard } from '../../guards/auth.guard';
 
 @NgModule({
   declarations: [AccountComponent],

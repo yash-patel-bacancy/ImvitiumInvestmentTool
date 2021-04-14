@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ToasterService } from 'src/app/services/toaster.service';
-import { UserService } from 'src/app/services/user.service';
+import { ToasterService } from '../../services/toaster.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-contact',

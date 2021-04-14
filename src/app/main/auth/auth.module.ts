@@ -6,8 +6,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { RouterModule } from '@angular/router';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoggedInGuard } from 'src/app/guards/loggedIn.guard';
-import { AuthGuard } from 'src/app/guards/auth.guard';
+import { LoggedInGuard } from '../../guards/loggedIn.guard';
+import { AuthGuard } from '../../guards/auth.guard';
 
 @NgModule({
   declarations: [

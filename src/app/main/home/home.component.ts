@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UpdatesModel } from 'src/app/interfaces/updates.model';
-import { AuthService } from 'src/app/services/auth.service';
-import { ToasterService } from 'src/app/services/toaster.service';
-import { UserService } from 'src/app/services/user.service';
+import { UpdatesModel } from '../../interfaces/updates.model';
+import { AuthService } from '../../services/auth.service';
+import { ToasterService } from '../../services/toaster.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-home',

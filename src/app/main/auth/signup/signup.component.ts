@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { UserModel } from 'src/app/interfaces/user.model';
-import { AuthService } from 'src/app/services/auth.service';
-import { ToasterService } from 'src/app/services/toaster.service';
+import { UserModel } from '../../../interfaces/user.model';
+import { AuthService } from '../../../services/auth.service';
+import { ToasterService } from '../../../services/toaster.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,8 +16,7 @@ export class SignupComponent implements OnInit {
   public userForm: FormGroup;
   public subscription: Subscription;
   public user: UserModel;
-  constructor(private route: ActivatedRoute,
-              private router: Router,
+  constructor(private router: Router,
               private authService: AuthService,
               private toasterService: ToasterService) { }
 
