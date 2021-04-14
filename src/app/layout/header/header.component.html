@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark text-center">
             <div class="row">
-                <!-- <img class="img-resposive img" src="assets/images/star-img.png"> -->
+                <!-- <img class="img-resposive img" src="../../assets/images/star-img.png"> -->
                 <div class="col-lg-3 header-left" *ngIf="!loggedIn">
                     <ul class="navbar navbar-nav" >
                         <li id="text" class="nav-item about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-5 col-5 justify-content-center" style="justify-content: center;" *ngIf="!loggedIn">
                     <a [routerLink]="['home']">
-                        <img class="img-responsive main" style="margin-top: 30px;" src="assets/images/logo.png">
+                        <img class="img-responsive main" style="margin-top: 30px;" src="../../assets/images/logo.png">
                     </a>
                 </div>
                 <div class="col-lg-4 header-right" *ngIf="!loggedIn">
@@ -28,7 +28,7 @@
                                 <a class="nav-link" routerLink="auth/login">LOGIN</a>
                             </li>
                             <li style="list-style-type: none;margin-top: -34px;margin-left: 200px;">
-                                <img class="img-responsive" src="assets/images/star-bullets.png">
+                                <img class="img-responsive" src="../../assets/images/star-bullets.png">
                             </li>
                             <li id="text" class="nav-item signup" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                                 <a class="nav-link" routerLink="auth/signup">SIGNUP</a>
@@ -49,7 +49,7 @@
                     <div>
                         <ul class=" navbar navbar-nav justify-content-center ">
                             <li class="nav-item img" routerLinkActive="active " [routerLinkActiveOptions]="{ exact: true }"style="list-style-type: none;">
-                                <img src="assets/images/logo-small.png">
+                                <img src="../../assets/images/logo-small.png">
                             </li>
                         </ul>
                     </div>

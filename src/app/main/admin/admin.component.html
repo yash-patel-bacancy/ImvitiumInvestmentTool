@@ -10,11 +10,11 @@
                     <ul class="navbar-nav">
                         <li><a (click)="onSelectAccountype('subscribe')">SUBSCRIBED</a></li>
                         <li>
-                            <img class="img-responsive" src="assets/images/star-bullets.png">
+                            <img class="img-responsive" src="../../assets/images/star-bullets.png">
                         </li>
                         <li><a (click)="onSelectAccountype('unsubscribe')">UNSUBSCRIBED</a></li>
                         <li>
-                            <img class="img-responsive" src="assets/images/star-bullets.png">
+                            <img class="img-responsive" src="../../assets/images/star-bullets.png">
                         </li>
                         <li><a (click)="onSelectAccountype('free')">FREE</a></li>
                     </ul>
@@ -78,7 +78,7 @@
                                 <td>{{ user.account_type }}</td>
                                 <td>-</td>
                                 <td>
-                                    <img style="width:20px" class="img-responsive" (click)="showDialog(i)" src="assets/images/edit-black.png">
+                                    <img style="width:20px" class="img-responsive" (click)="showDialog(i)" src="../../assets/images/edit-black.png">
                                 </td>
                             </tr>
                         </table>
@@ -118,8 +118,8 @@
                             <div class="row" style="padding-top: 10px;" *ngFor="let update of controls; let i=index" [formGroupName]="i">
                                 <input type="text" class="text form-control" formControlName="update">
                                 <div style="margin-top: 5px;padding-left: 25px;">
-                                    <a (click)="onUpdate(i)"><img style="width:18px;" [src]="this.allUpdates.controls[i].disabled ? 'assets/images/edit.png' : 'assets/images/save.png'"></a>
-                                    <a (click)="onDeleteUpdate(i)"><img style="width:18px;" src="assets/images/delete.png"></a>
+                                    <a (click)="onUpdate(i)"><img style="width:18px;" [src]="this.allUpdates.controls[i].disabled ? '../../assets/images/edit.png' : '../../assets/images/save.png'"></a>
+                                    <a (click)="onDeleteUpdate(i)"><img style="width:18px;" src="../../assets/images/delete.png"></a>
                                 </div>
                             </div>
                         </div>
