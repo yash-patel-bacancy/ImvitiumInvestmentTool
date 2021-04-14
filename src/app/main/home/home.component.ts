@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { UpdatesModel } from '../../interfaces/updates.model';
 import { AuthService } from '../../services/auth.service';
 import { ToasterService } from '../../services/toaster.service';
@@ -16,8 +16,7 @@ export class HomeComponent implements OnInit {
   public updates: UpdatesModel[]=[];
   public link:any;
 
-  constructor(private route: ActivatedRoute,
-              private router: Router,
+  constructor(private router: Router,
               private userService:UserService,
               private authService: AuthService,
               private toasterService: ToasterService,
