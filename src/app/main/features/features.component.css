@@ -13,8 +13,13 @@ h1{
     text-align: center;
     font-size: 50px;
 }
+img{
+    margin-right: 10px;
+}
 li{
     text-align:left;
+    list-style-type: none;
+    font-size:medium;
 }
 .row{
     display: flex;

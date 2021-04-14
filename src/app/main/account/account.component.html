@@ -1,0 +1,85 @@
+<div class="container">
+    <Form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+        <div class="col-md-12">
+            <div class="col-sm-6">
+                <h1>ACCOUNT</h1>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Email:</label>
+                        <input type="text" name="email" id="email" class="form-control" formControlName="email">
+                        <div class="alert" *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched">
+                            <small *ngIf="userForm.controls['email'].errors.required">Email is required!</small>
+                            <small *ngIf="userForm.controls['email'].errors.pattern">Enter a valid email!</small>
+                        </div>
+                        <label>Username:</label>
+                        <input type="text" name="username" id="username" class="form-control" formControlName="username">
+                        <div class="alert" *ngIf="userForm.controls['username'].invalid && userForm.controls['username'].touched">
+                            <small *ngIf="userForm.controls['username'].errors.required">Username is required!</small>
+                            <small *ngIf="userForm.controls['username'].errors.pattern">Enter a valid username!</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Payment Method:</label>
+                        <input type="text" name="paymentMethod" class="form-control">
+                        <label id="center">Renew Date:</label>
+                        <input type="date" name="renewDate" class="form-control">
+                    </div>
+                    <div class="col-sm-6" *ngIf="!editMode">
+                        <button class="btn" type="submit" (click)="onEdit()">
+                            <b>EDIT</b>
+                        </button>
+                    </div>
+                    <div *ngIf="editMode">
+                        <div class="col-sm-6">
+                            <button class="btn" type="submit" [disabled]="!userForm.valid">
+                                <b>SAVE</b>
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn" type="button" (click)="onCancel()">
+                                <b>CANCEL</b>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div style="margin-left: 20px;">
+                    <a [routerLink]="['/auth/change-password']">Change Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a routerLink="/contact">Contact Us</a><br>
+                </div>
+                <p style="margin-bottom: 10px;margin-top: 10px;">UPDATES/NEWS</p>
+                <table>
+                    <tr *ngFor="let update of updates;let i=index">
+                        <td>
+                            {{update.news_update}}
+                        </td>
+                        <td style="padding-left: 30px;">
+                            {{update.updated_at.substring(0,10)}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <div class="row" style="text-align: center;">
+                    <div class="col-md-12">
+                        <h1 style="margin-left: 140px;">MY APPS</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <span>
+                        <img
+                            width="10%"
+                            style="margin-left: 200px;margin-top: 30px;"
+                            src="assets/images/repository-logo.png">
+                        <a style="margin-right: 20px;">Repository</a>
+                        <button 
+                            class="btn" 
+                            type="button" (click)="onLaunch()" >
+                            <b>LAUNCH</b>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </Form>
+</div><br>

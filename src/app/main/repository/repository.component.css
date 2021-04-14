@@ -1,0 +1,119 @@
+.types {
+    text-align: center;
+    height: 80px;
+    width: 100px;
+    padding-top: 20px;
+    background-color: #394e78;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.col-md-3 {
+    width: 230px;
+}
+
+.filter1 {
+    font-size: 18px;
+    padding-top: 45px;
+}
+
+.name,
+.img {
+    padding-left: 0px;
+}
+
+.name,
+.status {
+    margin-top: 5px;
+    padding-right: 0px;
+}
+
+.img {
+    width: 40px;
+}
+
+.ppsFilter {
+    width: 100%;
+    font-size: 15px;
+    background-color: #394e78;
+    border-radius: 20px;
+    padding: 7px;
+    color: black;
+    border: none;
+}
+
+.live {
+    background-color: #394e78;
+    border-radius: 20px;
+    padding: 7px;
+    width: 90px;
+    text-align: center;
+}
+
+.filter2 {
+    font-size: 18px;
+}
+
+.btn-sm {
+    background-color: rgb(74, 174, 192);
+    position: relative;
+    border-radius: 20px;
+    padding: 6px;
+    margin-left: -70px;
+    margin-top: 2px;
+    border: none;
+}
+
+.filter3 {
+    font-size: 18px;
+}
+
+.symbol {
+    padding-left: 0px;
+}
+
+.btn {
+    background-color: #394e78;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+.button {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.document {
+    width: 30%;
+    padding: 7px;
+}
+
+.symbol1 {
+    width: 10%;
+}
+
+.company,
+.headline {
+    width: 25%;
+    padding: 7px;
+}
+
+.launch,
+.twitter {
+    width: 5%;
+    padding: 7px;
+}
+
+.button1 {
+    background-color: #993e8c;
+    padding: 4px;
+    border-radius: 10px;
+    border: none;
+}
+
+.list {
+    background-color: #394e78;
+    border-radius: 16px;
+    height: 20px;
+}

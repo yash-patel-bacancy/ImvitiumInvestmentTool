@@ -1,0 +1,57 @@
+.container {
+    margin-left: 90px;
+}
+
+.btn {
+    background-color: rgb(8, 60, 138);
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+input[disabled]{
+    background-color: rgb(22, 177, 177);
+}
+input::after{
+    background-color: rgb(22, 177, 177);
+}
+
+p{
+    font-size: 50px;
+}
+td{
+    font-size: 20px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    border-radius: 20px;
+    background-color: rgb(22, 177, 177);
+}
+
+h1 {
+    font-size: 50px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.alert {
+    font-size: 12px;
+    color: red;
+    margin-bottom: 0px;
+}
+
+small {
+    margin-left: -10px;
+}
+
+a {
+    color: white;
+}
+
+.col-xs-8 {
+    font-size: 20px;
+}

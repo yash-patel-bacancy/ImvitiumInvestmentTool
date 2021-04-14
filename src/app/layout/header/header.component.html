@@ -1,69 +1,69 @@
 <header>
     <div class="container">
-        <div class="row">
-            <!-- <img 
-                    class="img-resposive img"
-                    src="assets/images/star-img.png"
-                > -->
-            <div class="col-lg-3">
-                <ul class="navbar-nav">
-                    <li 
-                        id="text"
-                        routerLinkActive="active" 
-                        [routerLinkActiveOptions]="{ exact: true }">
-                        <a routerLink="main/about" >ABOUT</a>
-                    </li>
-                    <li 
-                        id="text"
-                        routerLinkActive="active" 
-                        [routerLinkActiveOptions]="{ exact: true }"
-                        style="margin-left: 40px;">
-                        <a routerLink="main/features">FEATURES</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark text-center">
+            <div class="row">
+                <!-- <img class="img-resposive img" src="assets/images/star-img.png"> -->
+                <div class="col-lg-3 header-left" *ngIf="!loggedIn">
+                    <ul class="navbar navbar-nav" >
+                        <li id="text" class="nav-item about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            <a class="nav-link" routerLink="about">ABOUT</a>
+                        </li>
+                        <li id="text" class="nav-item features" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" style="margin-left: 40px;">
+                            <a class="nav-link" routerLink="features">FEATURES</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-5 justify-content-center" style="justify-content: center;" *ngIf="!loggedIn">
+                    <a [routerLink]="['home']">
+                        <img class="img-responsive main" style="margin-top: 30px;" src="assets/images/logo.png">
+                    </a>
+                </div>
+                <div class="col-lg-4 header-right" *ngIf="!loggedIn">
+                    <div>
+                        <ul class="navbar navbar-nav">
+                            <li id="text" class="nav-item contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                                <a class="nav-link" routerLink="contact">CONTACT</a>
+                            </li>
+                            <li id="text" class="nav-item login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" style="margin-left: 40px;">
+                                <a class="nav-link" routerLink="auth/login">LOGIN</a>
+                            </li>
+                            <li style="list-style-type: none;margin-top: -34px;margin-left: 200px;">
+                                <img class="img-responsive" src="assets/images/star-bullets.png">
+                            </li>
+                            <li id="text" class="nav-item signup" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                                <a class="nav-link" routerLink="auth/signup">SIGNUP</a>
+                            </li>
+                        </ul><br>
+                    </div><br>
+                </div>
+                <div class="col-lg-4 col-4" >
+                    <div *ngIf="loggedIn && isUser && (router.url==='/auth/change-password' || router.url==='/repository')">
+                        <ul class=" navbar navbar-nav ">
+                            <li id="text " class="nav-item user" routerLinkActive="active " [routerLinkActiveOptions]="{ exact: true } ">
+                                <a class="nav-link " routerLink="account " (click)="onBack() ">USER CP</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-2" *ngIf="loggedIn && isUser">
+                    <div>
+                        <ul class=" navbar navbar-nav justify-content-center ">
+                            <li class="nav-item img" routerLinkActive="active " [routerLinkActiveOptions]="{ exact: true }"style="list-style-type: none;">
+                                <img src="assets/images/logo-small.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 image" *ngIf="loggedIn " >
+                    <div>
+                        <ul class="navbar navbar-nav ">
+                            <li id="text " class="nav-item logout" routerLinkActive="active " [routerLinkActiveOptions]="{ exact: true } ">
+                                <a class="nav-link " routerLink="home " (click)="onLogout() ">LOGOUT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-5">
-                <a routerLink="main/home">
-                    <img 
-                        width="300px"
-                        height="300px"
-                        class="img-responsive"
-                        style="text-align:center;margin-left: 125px;margin-top: 30px;"
-                        src="assets/images/logo.png"
-                    >
-                </a>
-            </div>
-            <div class="col-lg-4">
-                <div>
-                    <ul class="navbar-nav">
-                        <li 
-                            id="text"
-                            routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }">
-                            <a routerLink="main/contact">CONTACT</a>
-                        </li>
-                        <li 
-                            id="text"
-                            routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }"
-                            style="margin-left: 40px;">
-                            <a routerLink="main/auth/login">LOGIN</a>
-                        </li>
-                        <li style="list-style-type: none;margin-top: 30px;">
-                            <img 
-                                class="img-responsive"
-                                src="assets/images/star-bullets.png"
-                            >
-                        </li>
-                        <li 
-                            id="text"
-                            routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }">
-                            <a routerLink="main/auth/signup">SIGNUP</a>
-                        </li>
-                    </ul><br>
-                </div><br>
-            </div>
-        </div>
-    </div>    
+        </nav>
+    </div>
 </header>

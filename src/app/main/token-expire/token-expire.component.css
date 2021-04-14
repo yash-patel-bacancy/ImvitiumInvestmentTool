@@ -1,0 +1,12 @@
+.login {
+    background-color: rgb(8, 60, 138);
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 7px;
+}
+
+.tokenExpire {
+    padding-top: 150px;
+    text-align: center;
+}

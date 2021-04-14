@@ -1,0 +1,222 @@
+li {
+    list-style-type: none;
+    color: #020408;
+}
+
+.navbar-nav {
+    color: black;
+    font-weight: bold;
+    font-size: small;
+}
+
+ul {
+    background-color: #85d6dd;
+    border-radius: 20px;
+    padding-top: 2px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.user input {
+    background-color: #394e78;
+}
+
+.user {
+    background-color: #85d6dd;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.pull-right {
+    float: right;
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+
+table {
+    color: black;
+    font-size: 14px;
+    width: auto;
+}
+
+input {
+    border: 1px solid #394e78;
+    border-radius: 20px;
+    background-color: #394e78;
+}
+
+.heading {
+    font-weight: bolder;
+}
+
+th {
+    width: auto;
+    padding-right: 18px;
+    padding: 10px;
+}
+
+td {
+    width: auto;
+    border-bottom: 2px solid #3cc3c9;
+    padding: 10px;
+}
+
+.subscribe {
+    text-align: center;
+    font-size: 60px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    background-color: #394e78;
+}
+
+input {
+    border: none;
+    width: 80%;
+    background-color: #85d6dd;
+}
+
+.youtube {
+    background-color: #85d6dd;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 13px;
+    padding-right: 5px;
+}
+
+button {
+    float: right;
+    border-radius: 20px;
+    background-color: #394e78;
+    margin-bottom: 10px;
+}
+
+.news {
+    margin-top: 10px;
+    background-color: #85d6dd;
+    border-radius: 20px;
+}
+
+.updates {
+    height: 134px;
+    overflow-y: scroll;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 530px;
+}
+
+.updates input {
+    float: left;
+}
+
+.text {
+    background-color: #85d6dd;
+}
+
+.updates a {
+    background-color: #394e78;
+    padding: 6px;
+    margin-right: 2px;
+    border-radius: 10px;
+}
+
+.button {
+    padding-top: 10px;
+}
+
+.hover_bkgr_fricc {
+    position: absolute;
+    margin-top: 40px;
+    background-color: #44275f;
+    height: fit-content;
+    z-index: 100;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.popupCloseButton {
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 20px;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.popupCloseButton:hover {
+    background-color: grey;
+}
+
+.edituserinput {
+    padding: 7px;
+    color: black;
+    width: 100%;
+    font-size: 15px;
+    background-color: rgb(74, 174, 192);
+    border-radius: 16px;
+}
+
+.background {
+    background-color: black;
+    opacity: 0.2;
+}
+
+.title {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.submit {
+    background-color: #394e78;
+    border: none;
+    padding: 7px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: large;
+}
+
+.pagination {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.pagination a {
+    color: #394e78;
+    float: left;
+    padding: 4px 14px;
+    cursor: pointer;
+}
+
+.pagination a.active {
+    background-color: #394e78;
+    color: white;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+}
+
+.center {
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #85d6dd;
+}

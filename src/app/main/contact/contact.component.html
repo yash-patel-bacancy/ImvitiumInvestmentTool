@@ -1,62 +1,36 @@
 <div class="container">
-    <Form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
-        <div class="col-md-12">
-            <h1>CONTACT</h1>
-            <br>
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <label id="center">Name </label>
-                <input 
-                    type="text"
-                    name="name"
-                    id="center"
-                    class="form-control"
-                    ng-maxlength="20" 
-                    formControlName="name">
+    <h1>CONTACT</h1>
+    <br>
+    <div class="row" style="justify-content: center;">
+        <div class="col-sm-4"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+            <Form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+                <label>Name </label>
+                <input type="text" name="name" class="form-control" ng-maxlength="20" formControlName="name">
                 <div class="alert" *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched">
                     <small *ngIf="userForm.controls['name'].errors.required">Name is required!</small>
                     <small *ngIf="userForm.controls['name'].errors.minlength">Enter a name having more than 2 characters!</small>
                     <small *ngIf="userForm.controls['name'].errors.pattern">Enter a name having only alphabets!</small>
                 </div>
-                <label id="center">Email</label>
-                <input 
-                    type="text"
-                    name="email" 
-                    id="center"
-                    class="form-control"
-                    formControlName="email">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control" formControlName="email">
                 <div class="alert" *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched">
                     <small *ngIf="userForm.controls['email'].errors.required">Email is required!</small>
                     <small *ngIf="userForm.controls['email'].errors.pattern">Enter a valid email!</small>
                 </div>
-                <label id="center">Message</label>
-                <textarea 
-                    type="text"
-                    name="message"
-                    id="center"
-                    class="form-control"
-                    style="padding-bottom: 150px;"
-                    formControlName="message"></textarea>
+                <label>Message</label>
+                <textarea type="text" name="message" class="form-control" style="padding-bottom: 150px;" formControlName="message"></textarea>
                 <br>
-                <div class="center">
-                    <button 
-                        class="btn" 
-                        type="submit" 
-                        [disabled]="!userForm.valid">
+                <div style="text-align: center;">
+                    <button class="btn" type="submit" [disabled]="!userForm.valid">
                         <b>SUBMIT</b>
                     </button>
                 </div>
                 <br>
-            </div> 
-            <div class="col-sm-4">
-                <img
-                    class="img-resposive"
-                    width="176px"
-                    height="153px"
-                    style="margin-left: 160px;margin-top: 40px;"
-                    src="assets/images/chat-icon.png"
-                >
-            </div>
+            </Form>
         </div>
-    </Form>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-2">
+            <img class="img-resposive" width="176px" height="153px" src="assets/images/chat-icon.png" (click)="onContactClick()">
+        </div>
+    </div>
 </div><br>

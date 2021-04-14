@@ -1,84 +1,37 @@
 <div class="container">
     <div class="row">
-      <div class="button">
-        <button class="btn">LAUNCH</button>
-      </div>
+        <div class="button">
+            <button class="btn" (click)="onLaunch()">LAUNCH</button>
+        </div>
     </div>
     <br>
     <br>
     <div class="row">
-      <div class="col-md-6">
-        <h1>UPDATES/NEWS</h1>
-        <ul class="list">
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-          <li>
-            <span>This is the Imvitium Investment Tool.</span>
-            <strong>10/12/2020</strong>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <div class="media-box">
-          <div class="pull-right">
-            <img 
-            height="190px"
-            width="190px"
-            class="img-responsive"
-            style="margin-top: -76px;"
-            src="assets/images/spaceship.png"
-          >
-          </div>
+        <div class="col-md-6">
+            <p>UPDATES/NEWS</p>
+            <table>
+                <tr *ngFor="let update of updates;let i=index">
+                    <td>
+                        {{update.news_update}}
+                    </td>
+                    <td style="padding-left: 30px;">
+                        {{update.updated_at.substring(0,10)}}
+                    </td>
+                </tr>
+            </table>
         </div>
-        <iframe
-          width="375"
-          height="215"
-          style="margin-left: 70px;margin-top: -80px;"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"
-        >
+        <div class="col-md-6 col-sm-6 col-6">
+            <div class="media-box">
+                <div class="pull-right">
+                    <img height="190px" width="190px" class="img-responsive" style="margin-top: -76px;" src="assets/images/spaceship.png">
+                </div>
+            </div>
+            <iframe width="375" height="215" style="margin-left: 70px;margin-top: -80px;" [src]="link">
         </iframe>
-      </div>
+        </div>
     </div>
-  </div>
-  <div class="footer">
-    <img
-      class="img-responsive img"
-      id="img"
-      src="assets/images/sun-img.png"
-    >
-    <img
-      class="img-responsive"
-      style="width:120%;position: relative;"
-      src="assets/images/footer.png"
-    >
-  </div>
+</div>
+<div class="footer">
+    <img class="img-responsive img" id="img" src="assets/images/sun-img.png">
+    <img class="img-responsive" style="width:120%;position: relative;" src="assets/images/footer.png">
+</div>

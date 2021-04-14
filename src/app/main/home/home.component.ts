@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UpdatesModel } from 'src/app/interfaces/updates.model';
+import { AuthService } from 'src/app/services/auth.service';
+import { ToasterService } from 'src/app/services/toaster.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +13,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public updates: UpdatesModel[]=[];
+  public link:any;
+
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private userService:UserService,
+              private authService: AuthService,
+              private toasterService: ToasterService,
+              private dom: DomSanitizer) { }
 
   ngOnInit(): void {
+    this.userService.getUpdates().subscribe(resData=>{
+      console.log(resData);
+      this.updates=resData;
+    },
+    (error)=>{
+      console.log(error);
+      this.toasterService.showError(error,'Error');
+    });
+
+    this.userService.getLink().subscribe(resData=>{
+      this.link=this.dom.bypassSecurityTrustResourceUrl(resData);
+    },
+    (error)=>{
+      console.log(error);
+      this.toasterService.showError(error,'Error');
+    });
+  }
+
+  public onLaunch(){
+    if(this.authService.user){
+      this.router.navigate(['/repository']);
+    }
+    this.router.navigate(['auth/login']);
   }
 
 }

@@ -1,21 +1,116 @@
-ul{
+.row{
+    height: auto;
+}
+ul {
     margin-top: 40px;
 }
+.header-right{
+    background: url("../../../assets/images/header-right.png") 0 0/100% no-repeat;
+    list-style-type: none;
+    margin-top: 60px;
+    width:30%;
+    height: 100px;
+    float: right;
+    position: relative;
+}
+.header-left{
+    background: url("../../../assets/images/header-left.png") 0 0/100% no-repeat;
+    list-style-type: none;
+    margin-top: 60px;
+    width:28%;
+    height: 100px;
+}
+.about{
+    margin-left: -40px;
+    margin-top: -34px;
+    font-size: larger;
+}
+.features{
+    padding-left: 140px;
+    margin-top: -34px;
+    font-size: larger;
+}
+.contact{
+    margin-left: -28px;
+    margin-top: -34px;
+    font-size: larger;
+}
+.login{
+    padding-left: 105px;
+    margin-top: -34px;
+    font-size: larger;
+}
+.signup{
+    padding-left: 225px;
+    margin-top: -34px;
+    font-size: larger;
+}
 #text{
+    list-style-type: none;
+}
+
+.logout,.user {
     background-color: #394e78;
     border-radius: 20px;
-    margin:5px;
-    padding: 12px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 3px;
     cursor: pointer;
-    margin-top: 20px;
-    list-style-type:none;
+    font-size: large;
+    margin-top: -20px;
+    list-style-type: none;
 }
-a{
-    color:white;
-}/* 
-.row {
-    background-image: url("../../assets/images/star-img.png");
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-} */
+.user{
+    margin-top: 20px;
+}
+.logout{
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.img{
+    margin-left: 70px;
+}
+.image{
+    background: url("../../../assets/images/logout.png") 0 0/100% no-repeat;
+    width:30%;
+    height: 100%;
+    margin-left: auto;
+    margin-top: 50px;
+    float: right;
+}
+
+.main {
+    width: 63%;
+    height: 63%;
+    margin-left: 90px;
+}
+
+a {
+    color: white;
+}
+
+@media(max-width:1150px) {
+    .main {
+        width: 70%;
+        height: 70%;
+        margin-left: 40%;
+    }
+}
+
+@media(max-width:768px) {
+    .main {
+        width: 60%;
+        height: 60%;
+        margin-left: 40%;
+    }
+}
+
+@media(max-width:576px) {
+    .main {
+        width: 80%;
+        height: 80%;
+        margin-left: 40%;
+    }
+}

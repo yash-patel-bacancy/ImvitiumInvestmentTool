@@ -8,14 +8,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute,
-              private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onContact(){
-    this.router.navigateByUrl(`/main/contact`);
+    this.router.navigateByUrl(`/contact`);
   }
 
 }

@@ -1,0 +1,136 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-xs-6 col-12">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p style="margin-top: 25px;">Users</p>
+                </div>
+                <div class="col-xs-6">
+                    <p>Filter</p>
+                    <ul class="navbar-nav">
+                        <li><a (click)="onSelectAccountype('subscribe')">SUBSCRIBED</a></li>
+                        <li>
+                            <img class="img-responsive" src="assets/images/star-bullets.png">
+                        </li>
+                        <li><a (click)="onSelectAccountype('unsubscribe')">UNSUBSCRIBED</a></li>
+                        <li>
+                            <img class="img-responsive" src="assets/images/star-bullets.png">
+                        </li>
+                        <li><a (click)="onSelectAccountype('free')">FREE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" *ngIf="editMode">
+                    <div class="hover_bkgr_fricc">
+                        <div>
+                            <div class="popupCloseButton" (click)="this.editMode = false">
+                                &times;
+                            </div>
+                            <div class="row" style="padding: 5%;">
+                                <div class="col-md-12" style="font-size: 25px; font-weight: bold;margin-bottom: 10px;">
+                                    Edit User
+                                </div><br><br>
+                                <form [formGroup]="userEditForm" (ngSubmit)="onSubmitEditedUser()" style="width: 100%">
+                                    <div class="col-md-12 title">Username </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="edituserinput" name="name" formControlName="username" />
+                                    </div>
+                                    <div class="col-md-12 title" style="font-size: 15px">Email </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="edituserinput" name="email" formControlName="email" />
+                                    </div>
+                                    <div class="col-md-12 title" style="font-size: 15px">Account Type </div>
+                                    <div class="col-md-12">
+                                        <select type="text" name="accountType" class="edituserinput" formControlName="accountType"> 
+                                            <option *ngFor="let accountType of accountTypes">{{accountType}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4" style="margin-top: 30px;">
+                                        <input class="submit" type="submit" value="Submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-xs-12 col-12 user" [ngClass]="{'background': editMode}" style="background-color: #85d6dd; padding: 15px; border-radius: 20px">
+                <div class="row pull-right">
+                    <div class="col-xs-12">
+                        <input class="form-control" style="color:white;" placeholder="Search" [(ngModel)]="searchQuery" (ngModelChange)="onChangePage(1)">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-12">
+                        <table>
+                            <tr class="heading">
+                                <th>USER NAME</th>
+                                <th>EMAIL</th>
+                                <th>ACCOUNT TYPE</th>
+                                <th>RENEW DATE</th>
+                            </tr>
+                            <tr *ngFor="let user of userlist;let i=index">
+                                <td>{{ user.username }}</td>
+                                <td>{{ user.email }}</td>
+                                <td>{{ user.account_type }}</td>
+                                <td>-</td>
+                                <td>
+                                    <img style="width:20px" class="img-responsive" (click)="showDialog(i)" src="assets/images/edit-black.png">
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="center">
+                            <div class="pagination">
+                                <a [ngClass]="currentPage > 1 ? '' : 'disabled' " (click)="onChangePage(currentPage-1); currentPage = currentPage-1">&laquo; Previous</a>
+                                <a *ngFor="let page of getPages(); let i=index" [ngClass]="currentPage === i+1 ? 'active' : '' " (click)="onChangePage(i+1); currentPage = i+1">{{i+1}}</a>
+                                <a [ngClass]="(currentPage<totalPage) ? '' : 'disabled' " (click)="onChangePage(currentPage+1); currentPage = currentPage+1">Next &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-6 col-12">
+            <div class="row" style="text-align: center;">
+                <div class="col-md-3"></div>
+                <div class="col-md-5 col-8">
+                    <p style="text-align: center;">Total Subscribed Users</p>
+                    <p class="subscribe">{{totalSubuscribed}}</p>
+                </div>
+            </div>
+            <div class="col-xs-12" style="margin-bottom: 10px;">
+                <div class="row">
+                    <p>Youtube embedded video</p>
+                    <div class="youtube">
+                        <input type="text" [(ngModel)]="link" style="margin-left: 10px;margin-top: 3px;">
+                        <button type="submit" class="btn btn-primary btn-sm" (click)="updateLink()">SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+            <p>News and Updates</p>
+            <form [formGroup]="updateForm">
+                <div class="col-xs-12 news">
+                    <div class="row">
+                        <div class="col-xs-12 updates" formArrayName="updates">
+                            <div class="row" style="padding-top: 10px;" *ngFor="let update of controls; let i=index" [formGroupName]="i">
+                                <input type="text" class="text form-control" formControlName="update">
+                                <div style="margin-top: 5px;padding-left: 25px;">
+                                    <a (click)="onUpdate(i)"><img style="width:18px;" [src]="this.allUpdates.controls[i].disabled ? 'assets/images/edit.png' : 'assets/images/save.png'"></a>
+                                    <a (click)="onDeleteUpdate(i)"><img style="width:18px;" src="assets/images/delete.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button class="btn btn-sm" (click)="onDeleteAllUpdates()"><b>Delete All</b></button>
+                            <button class="btn btn-sm" (click)="onAddUpdate()"><b>Add</b></button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

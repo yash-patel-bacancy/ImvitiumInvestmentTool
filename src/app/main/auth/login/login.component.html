@@ -3,63 +3,36 @@
         <div class="col-md-12">
             <h1>LOGIN</h1>
             <br>
-            <div class="col-sm-4">
-                <img
-                    class="img-resposive"
-                    width="407px"
-                    height="365px"
-                    style="margin-left: -80px;"
-                    src="assets/images/img-left.png"
-                >
+            <div class="col-md-4 col-sm-4">
+                <img class="img-resposive" style="margin-left: -80px;" src="assets/images/img-left.png">
             </div>
-            <div class="col-sm-3">
-                <label id="center">Name | Email</label>
-                <input 
-                    type="text"
-                    name="usernameEmail"
-                    id="center"
-                    class="form-control"
-                    ng-maxlength="20" 
-                    formControlName="usernameEmail">
-                <div class="alert" *ngIf="userForm.controls['usernameEmail'].invalid && userForm.controls['usernameEmail'].touched">
-                    <small *ngIf="userForm.controls['usernameEmail'].errors.required">Email or username is required!</small>
-                    <small *ngIf="userForm.controls['usernameEmail'].errors.pattern">Enter a valid email or username!</small>
+            <div class="col-md-4 col-sm-4 col-4 form-group">
+                <label>Name | Email</label>
+                <input type="text" name="email" class="form-control" ng-maxlength="20" formControlName="email">
+                <div class="alert" *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched">
+                    <small *ngIf="userForm.controls['email'].errors.required">Email or username is required!</small>
+                    <small *ngIf="userForm.controls['email'].errors.pattern">Enter a valid email or username!</small>
                 </div>
                 <label id="center">Password</label>
-                <input 
-                    type="password"
-                    name="password" 
-                    id="center"
-                    class="form-control"
-                    ng-maxlength="8"
-                    formControlName="password">
+                <input type="password" name="password" class="form-control" ng-maxlength="8" formControlName="password">
                 <div class="alert" *ngIf="userForm.controls['password'].invalid && userForm.controls['password'].touched">
                     <small *ngIf="userForm.controls['password'].errors.required">Password is required!</small>
                 </div>
-                <input type="checkbox" id="center" style='margin-right:8px'>
+                <input type="checkbox" formControlName="rememberMe" style='margin-right:8px'>
                 <label> Remember Me</label><br>
                 <br>
-                <button 
-                    class="btn" 
-                    type="submit" 
-                    [disabled]="!userForm.valid">
-                    <b>LOGIN</b>
-                </button><br>
-                <div class="style">
-                    <a (click)="onForgotPassword()" style="margin-left:10px;color:white;"><u>Forgot Password?</u></a><br>
-                    Not an User? <a (click)="onSignup()" ><u style="color:white;">Sign Up</u></a>
+                <div class="row" style="text-align: center;">
+                    <button class="btn" type="submit" [disabled]="!userForm.valid">
+                        <b>LOGIN</b>
+                    </button><br>
+                    <div style="color:white;">
+                        <a (click)="onForgotPassword()"><u>Forgot Password?</u></a><br> Not an User? <a (click)="onSignup()"><u>Sign Up</u></a>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <img
-                    class="img-resposive"
-                    width="339px"
-                    height="389px"
-                    style="margin-left: 190px;"
-                    src="assets/images/img-right.png"
-                >
-            </div> 
+                <img class="img-resposive" src="assets/images/img-right.png">
+            </div>
         </div>
-    </Form>    
-    <div class="space" style="padding-bottom: 542px;"></div>
+    </Form>
 </div>

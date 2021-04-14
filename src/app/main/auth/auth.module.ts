@@ -5,7 +5,9 @@ import { SignupComponent } from './signup/signup.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { RouterModule } from '@angular/router';
-import {  ReactiveFormsModule } from '@angular/forms';
+import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoggedInGuard } from 'src/app/guards/loggedIn.guard';
+import { AuthGuard } from 'src/app/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,17 @@ import {  ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild([
-      { path: '', component: LoginComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'signup', component: SignupComponent },
-      { path: 'forgot-password', component:ForgotPasswordComponent}
+    
+    { path: '',component: LoginComponent },
+      { path: 'login', canActivate:[LoggedInGuard], component: LoginComponent },
+      { path: 'login/:token', canActivate:[LoggedInGuard], component: LoginComponent },
+      { path: 'signup', canActivate:[LoggedInGuard], component: SignupComponent },
+      { path: 'forgot-password', canActivate:[LoggedInGuard], component:ForgotPasswordComponent},
+      { path: 'resetpassword/:token', component:ResetPasswordComponent},
+      { path: 'change-password', canActivate:[AuthGuard], component:ResetPasswordComponent},
     ])
   ],
   exports: [
