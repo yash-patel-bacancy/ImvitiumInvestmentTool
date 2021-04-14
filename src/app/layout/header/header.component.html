@@ -37,7 +37,7 @@
                     </div><br>
                 </div>
                 <div class="col-lg-4 col-4" >
-                    <div *ngIf="loggedIn && isUser && (router.url==='/auth/change-password' || router.url==='/repository')">
+                    <div *ngIf="loggedIn && isUser && (router.url==='/auth/change-password' || router.url==='/repository' || router.url==='/contact')">
                         <ul class=" navbar navbar-nav ">
                             <li id="text " class="nav-item user" routerLinkActive="active " [routerLinkActiveOptions]="{ exact: true } ">
                                 <a class="nav-link " routerLink="account " (click)="onBack() ">USER CP</a>
